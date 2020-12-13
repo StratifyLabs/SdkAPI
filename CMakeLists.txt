@@ -56,11 +56,11 @@ sdk_add_subdirectory(ChartAPI developmentv4)
 sdk_add_subdirectory(ReportAPI developmentv4)
 sdk_add_subdirectory(SwdAPI master)
 if(SOS_IS_LINK)
-	sdk_add_subdirectory(UsbAPI developmentv4)
+#	sdk_add_subdirectory(UsbAPI developmentv4)
 endif()
-sdk_add_subdirectory(SosAPI main)
-sdk_add_subdirectory(HalAPI main)
-sdk_add_subdirectory(UxAPI main)
+#sdk_add_subdirectory(SosAPI main)
+#sdk_add_subdirectory(HalAPI main)
+#sdk_add_subdirectory(UxAPI main)
 
 
 
