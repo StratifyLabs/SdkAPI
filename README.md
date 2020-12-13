@@ -8,6 +8,17 @@ The sample `CMakeLists.txt` file uses an ad hoc method of cloning repositories f
 
 ## Building for Stratify OS
 
+Use `sl` to install a Stratify OS SDK.
+
+```
+git clone https://github.com/StratifyLabs/CMakeSDK.git
+git clone https://github.com/StratifyLabs/SdkAPI.git
+cd SdkAPI
+mkdir cmake_arm
+cd cmake_arm
+cmake ..
+make -j12
+```
 
 ## Building for the Desktop
 
