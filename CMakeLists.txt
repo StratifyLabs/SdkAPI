@@ -8,9 +8,9 @@ set(CMAKE_MODULE_PATH ${SOS_SDK_PATH}/cmake)
 set(CMAKE_TOOLCHAIN_FILE ${SOS_SDK_PATH}/cmake/sos-toolchain.cmake)
 include(sos-sdk)
 
-project(SDK)
+project(SdkAPI)
 
-set(IS_SDK TRUE CACHE INTERNAL "Build SDK projects")
+set(API_IS_SDK TRUE CACHE INTERNAL "Build SDK projects")
 option(IS_PULL "Pull SDK projects" ON)
 
 set(BASE_DIRECTORY ${CMAKE_SOURCE_DIR}/..)
