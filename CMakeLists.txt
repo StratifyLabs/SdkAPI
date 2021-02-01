@@ -11,7 +11,7 @@ include(sos-sdk)
 project(SdkAPI)
 
 set(API_IS_SDK TRUE CACHE INTERNAL "Build SDK projects")
-option(IS_PULL "Pull SDK projects" ON)
+option(IS_PULL "Pull SDK projects" OFF)
 
 set(BASE_DIRECTORY ${CMAKE_SOURCE_DIR}/..)
 message(STATUS "Base directory ${BASE_DIRECTORY}")
@@ -41,9 +41,14 @@ macro(sdk_add_subdirectory NAME BRANCH)
 	add_subdirectory(${BASE_DIRECTORY}/${NAME} ${NAME})
 endmacro()
 
+set(STRATIFYOS_LWIP_PATH
+	${CMAKE_CURRENT_SOURCE_DIR}/../InetAPI/lwip/include
+	${CMAKE_CURRENT_SOURCE_DIR}/../InetAPI/lwip/lwip-2.1.2/src/include
+	CACHE INTERNAL "LWIP INCLUDE PATHS")
+
 include(CTest)
 
-clone_or_pull(API https://github.com/StratifyLabs/API.git master)
+clone_or_pull(API https://github.com/StratifyLabs/API.git main)
 add_subdirectory(${BASE_DIRECTORY}/API API)
 include(${BASE_DIRECTORY}/API/libraries/API.cmake)
 
@@ -52,15 +57,8 @@ sdk_add_subdirectory(StratifyOS main)
 sdk_add_subdirectory(InetAPI main)
 sdk_add_subdirectory(CryptoAPI main)
 sdk_add_subdirectory(JsonAPI main)
-sdk_add_subdirectory(ChartAPI main)
-sdk_add_subdirectory(ReportAPI main)
-sdk_add_subdirectory(SwdAPI main)
-if(SOS_IS_LINK)
-#	sdk_add_subdirectory(UsbAPI main)
-endif()
-#sdk_add_subdirectory(SosAPI main)
-#sdk_add_subdirectory(HalAPI main)
-#sdk_add_subdirectory(UxAPI main)
+
+
 
 
 
