@@ -2,7 +2,7 @@
 
 The SdkAPI is a CMake super project starter template for Stratify OS and API framework applications.
 
-The sample `CMakeLists.txt` file uses an ad hoc method of cloning repositories from Github and building them. The template only includes libraries which can be pulled and installed in the local SDK. You could also add an application as a subproject and link directly to the static libs built inside `SdkAPI` rather than installing to the local SDK.
+The sample `CMakeLists.txt` file uses an ad hoc method of cloning repositories from Github and building them. The template only includes libraries cloned using git, but you could also add applications as subprojects and link directly to the static libs built inside `SdkAPI` rather than installing to the local SDK.
 
 # Getting Started
 
@@ -10,13 +10,13 @@ The sample `CMakeLists.txt` file uses an ad hoc method of cloning repositories f
 
 Use `sl` to install a Stratify OS SDK.
 
-```
-git clone https://github.com/StratifyLabs/CMakeSDK.git
+```bash 
 git clone https://github.com/StratifyLabs/SdkAPI.git
+# You can modify the CMakeLists.txt file to include additional libraries if needed
 cd SdkAPI
 mkdir cmake_arm
 cd cmake_arm
-cmake ..
+cmake .. -DIS_PULL=ON
 make -j12
 ```
 
