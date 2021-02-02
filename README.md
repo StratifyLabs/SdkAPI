@@ -48,8 +48,9 @@ git clone https://github.com/StratifyLabs/SdkAPI.git
 cd SdkAPI
 mkdir cmake_arm
 cd cmake_arm
-cmake .. -DIS_PULL=ON
-make -j12
+# You could also use "Unix Makefiles" and "make" instead of "Ninja"/"ninja"
+cmake .. -G Ninja -DIS_PULL=ON
+ninja
 ```
 
 ## Building for the Desktop
@@ -63,6 +64,7 @@ export SOS_SDK_PATH=$CWD/CMakeSDK
 cd SdkAPI
 mkdir cmake_link
 cd cmake_link
-cmake ..
-make -j12
+# You could also use "Unix Makefiles" and "make" instead of "Ninja"/"ninja"
+cmake .. -G Ninja
+ninja
 ```
