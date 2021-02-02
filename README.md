@@ -47,10 +47,18 @@ Now you can use `sl` to install the Stratify OS compiler on your computer.
 
 ```bash
 sl --initialize
+
+# optionally check for updates
+sl --update
+# if an update is available `slu` will make it effective
+slu
+
 sl cloud.login
 # paste your credentials from the website in the bash terminal
 sl cloud.install:compiler
 ```
+
+
 
 ### Building the SDK
 
