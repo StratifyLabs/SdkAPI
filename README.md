@@ -8,6 +8,8 @@ The sample `CMakeLists.txt` file uses an ad hoc method of cloning repositories f
 
 ## Building for Stratify OS
 
+### Installing `sl` and the Compiler
+
 Use `sl` to install a Stratify OS compiler. To install `sl` use the following commands. Be sure to pay attention to the OS specific comments when setting variables.
 
 ```bash
@@ -39,7 +41,15 @@ chmod 755 $INSTALL_DIRECTORY/bin/sl
 echo 'export PATH='$INSTALL_DIRECTORY'/bin:$PATH' >> ~/.$PROFILE
 echo 'export SOS_SDK_PATH='$INSTALL_DIRECTORY >> ~/.$PROFILE
 source ~/.$PROFILE
+```
 
+Now you can use `sl` to install the Stratify OS compiler on your computer.
+
+```bash
+sl --initialize
+sl cloud.login
+# paste your credentials from the website in the bash terminal
+sl cloud.install:compiler
 ```
 
 ```bash 
