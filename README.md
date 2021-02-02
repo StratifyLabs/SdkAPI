@@ -18,6 +18,10 @@ export SL_LINK=https://stratifylabs.page.link/sl_windows_x86_64
 
 # Choose a place to install the directory
 export INSTALL_DIRECTORY=~/StratifyLabs-SDK
+
+# on Windows you could use something easily accessible
+export INSTALL_DIRECTORY=/c/StratifyLabs-SDK
+
 # For MacOS and Windows (Msys)
 export PROFILE=~/.bash_profile
 
