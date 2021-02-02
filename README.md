@@ -35,6 +35,7 @@ chmod 755 $INSTALL_DIRECTORY/bin/sl
 echo 'export PATH='$INSTALL_DIRECTORY'/bin:$PATH' >> $PROFILE
 echo 'export SOS_SDK_PATH='$INSTALL_DIRECTORY >> $PROFILE
 source $PROFILE
+
 ```
 
 ```bash 
