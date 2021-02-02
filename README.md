@@ -29,10 +29,10 @@ export PROFILE=~/.profile
 # Copy and paste these
 mkdir -p $INSTALL_DIRECTORY
 chmod 777 -R $INSTALL_DIRECTORY # if needed to make public
-mkdir -p $INSTALL_DIRECTORY/Tools/gcc/bin
+mkdir -p $INSTALL_DIRECTORY/bin
 curl -L -o $INSTALL_DIRECTORY/bin/sl $SL_LINK
 chmod 755 $INSTALL_DIRECTORY/bin/sl
-echo 'export PATH='$INSTALL_DIRECTORY'/Tools/gcc/bin:$PATH' >> $PROFILE
+echo 'export PATH='$INSTALL_DIRECTORY'/bin:$PATH' >> $PROFILE
 echo 'export SOS_SDK_PATH='$INSTALL_DIRECTORY >> $PROFILE
 source $PROFILE
 ```
