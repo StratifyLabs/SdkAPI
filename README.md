@@ -63,6 +63,8 @@ cd cmake_arm
 # You could also use "Unix Makefiles" and "make" instead of "Ninja"/"ninja"
 cmake .. -G Ninja -DIS_PULL=ON
 ninja
+# if you want to use the same API libraries for multiple projects you can install them
+ninja install
 ```
 
 ## Building for the Desktop
@@ -79,4 +81,13 @@ cd cmake_link
 # You could also use "Unix Makefiles" and "make" instead of "Ninja"/"ninja"
 cmake .. -G Ninja
 ninja
+# if you want to use the API libraries for multiple projects, you can install them
+ninja install
 ```
+
+## Uninstalling `sl` and the Compiler
+
+To completely uninstall the SDK, you need to:
+
+- Delete the `$INSTALL_DIRECTORY` folder that you specified
+- Modify the bash `$PROFILE` file to remove the modifications to `$PATH` and `$SOS_SDK_PATH`
