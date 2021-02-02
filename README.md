@@ -6,6 +6,8 @@ The sample `CMakeLists.txt` file uses an ad hoc method of cloning repositories f
 
 # Getting Started
 
+> These instructions are for cross-compiling to Stratify OS applications. For do a native build, please see the [Desktop Building Guide](Desktop.md).
+
 ## Building for Stratify OS
 
 ### Installing `sl` and the Compiler
@@ -72,24 +74,6 @@ cd cmake_arm
 cmake .. -G Ninja -DIS_PULL=ON
 ninja
 # if you want to use the same API libraries for multiple projects you can install them
-ninja install
-```
-
-## Building for the Desktop
-
-Building for the desktop requires cloning a copy of `CMakeSDK` in addition to `SdkAPI`.
-
-```
-git clone https://github.com/StratifyLabs/CMakeSDK.git
-git clone https://github.com/StratifyLabs/SdkAPI.git
-export SOS_SDK_PATH=$CWD/CMakeSDK
-cd SdkAPI
-mkdir cmake_link
-cd cmake_link
-# You could also use "Unix Makefiles" and "make" instead of "Ninja"/"ninja"
-cmake .. -G Ninja
-ninja
-# if you want to use the API libraries for multiple projects, you can install them
 ninja install
 ```
 
