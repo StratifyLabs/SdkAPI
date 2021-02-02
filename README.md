@@ -52,6 +52,8 @@ sl cloud.login
 sl cloud.install:compiler
 ```
 
+### Building the SDK
+
 ```bash 
 git clone https://github.com/StratifyLabs/SdkAPI.git
 # You can modify the CMakeLists.txt file to include additional libraries if needed
