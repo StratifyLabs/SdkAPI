@@ -8,7 +8,34 @@ The sample `CMakeLists.txt` file uses an ad hoc method of cloning repositories f
 
 ## Building for Stratify OS
 
-Use `sl` to install a Stratify OS SDK.
+Use `sl` to install a Stratify OS compiler. To install `sl` use the following commands. Be sure to pay attention to the OS specific comments when setting variables.
+
+```bash
+# For MacOS
+export SL_LINK=https://stratifylabs.page.link/sl_Darwin_x86_64
+# For Windows
+export SL_LINK=https://stratifylabs.page.link/sl_windows_x86_64
+
+# Choose a place to install the directory
+export INSTALL_DIRECTORY=~/StratifyLabs-SDK
+# For MacOS and Windows (Msys)
+export PROFILE=~/.bash_profile
+
+# For Linux
+export PROFILE=~/.profile
+```
+
+```bash
+# Copy and paste these
+mkdir -p $INSTALL_DIRECTORY
+chmod 777 -R $INSTALL_DIRECTORY # if needed to make public
+mkdir -p $INSTALL_DIRECTORY/Tools/gcc/bin
+curl -L -o $INSTALL_DIRECTORY/bin/sl $SL_LINK
+chmod 755 $INSTALL_DIRECTORY/bin/sl
+echo 'export PATH='$INSTALL_DIRECTORY'/Tools/gcc/bin:$PATH' >> $PROFILE
+echo 'export SOS_SDK_PATH='$INSTALL_DIRECTORY >> $PROFILE
+source $PROFILE
+```
 
 ```bash 
 git clone https://github.com/StratifyLabs/SdkAPI.git
