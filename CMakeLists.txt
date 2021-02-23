@@ -57,6 +57,8 @@ sdk_add_subdirectory(StratifyOS main)
 sdk_add_subdirectory(InetAPI main)
 sdk_add_subdirectory(CryptoAPI main)
 sdk_add_subdirectory(JsonAPI main)
+sdk_add_subdirectory(DspAPI main)
+sdk_add_subdirectory(AudioAPI main)
 
 
 
